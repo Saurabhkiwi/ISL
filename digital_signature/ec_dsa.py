@@ -6,7 +6,7 @@ def generate_ecdsa_keys(curve='P-256'):
     """Generates an ECDSA key pair."""
     key = ECC.generate(curve=curve) # [cite: 496]
     private_key = key
-    public_key = key.publickey()
+    public_key = key.public_key()
     return public_key, private_key
 
 def ecdsa_sign(private_key, msg_bytes):
